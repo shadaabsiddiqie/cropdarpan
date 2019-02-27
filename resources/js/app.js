@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+require('mdbootstrap');
 
 window.Vue = require('vue');
 

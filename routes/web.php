@@ -12,9 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $locales = config()->get('locales');
+    return view('views.welcome', compact('locales'));
 });
 
+Route::get('/expert', function () {
+    $locales = config()->get('locales');
+    return view('views.expert', compact('locales'));
+})->name('expert');
+
+Route::get('locale/{locale}', function ($locale) {
+    if (array_key_exists($locale, config()->get('locales'))) {
+        session()->put('app_locale', $locale);
+    }
+    return redirect()->back();
+})->name('locale.switch');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

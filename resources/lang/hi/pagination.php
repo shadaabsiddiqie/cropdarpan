@@ -13,8 +13,8 @@ return [
     |
     */
 
-    'previous' => '&laquo; Previous',
-    'next' => 'Next &raquo;',
-    'view_more' => 'View More'
+    'previous' => '&laquo; पिछला',
+    'next' => 'आगामी &raquo;',
+    'view_more' => 'और देखो'
 
 ];
